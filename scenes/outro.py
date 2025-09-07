@@ -29,7 +29,7 @@ class OutroScene(Scene):
         self.add(stars_layer)
 
         # Stars parallax
-        grad_bg.add_updater(lambda m, dt: m.shift(UP * 0.01))
+        # grad_bg.add_updater(lambda m, dt: m.shift(UP * 0.01))
         stars_layer.add_updater(lambda m, dt: m.shift(UP * 0.03))
 
         # === Particles Sparkles ===

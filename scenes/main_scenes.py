@@ -39,7 +39,6 @@ def s1_launch(scene: MovingCameraScene):
     inner_flame = Polygon([-0.15,0,0],[0,-0.7,0],[0.15,0,0], color=YELLOW, fill_opacity=0.8).next_to(body, DOWN, buff=0)
 
     rocket = VGroup(body, nose, booster_left, booster_right, main_flame, inner_flame).move_to(DOWN*2).set_stroke(color=GREY, width=0.5)
-
     # Launch pad
     pad = Rectangle(width=2, height=1, fill_color="#4D4D4D", fill_opacity=1).move_to(DOWN*3.5).set_stroke(width=0.5)
     tower = Rectangle(width=0.3, height=3, fill_color="#4D4D4D", fill_opacity=1).next_to(pad, UP, buff=0).shift(LEFT*1.2).set_stroke(width=0.5)
@@ -338,19 +337,8 @@ def s3_transfer(scene: MovingCameraScene):
         )
     scene.wait(4)
 
-    # Fade out rocket, flame, shadow
-    # scene.play(FadeOut(VGroup(shadow, rocket )), run_time=2)
     # Fade out background elements
     scene.play(FadeOut(VGroup(mars_sky, mars_ground, stars, mars_land, rocks, craters, hills, haze, dust_particles, shadow, rocket)), run_time=3)
 
     # Restore camera
     scene.play(Restore(frame), run_time=2)
-
-# # === Master Scene (One-Command Render) ===
-# class MasterScene(MovingCameraScene):
-#     def construct(self):
-#         IntroScene.construct(self)
-#         s1_launch(self)       # Scene 1
-#         s2_orbit(self)        # Scene 2
-#         s3_transfer(self)     # Scene 3
-#         OutroScene.construct(self)

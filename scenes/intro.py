@@ -25,7 +25,7 @@ class IntroScene(Scene):
         self.add(stars_layer)
 
         # Parallax effect
-        grad_bg.add_updater(lambda m, dt: m.shift(UP * 0.02))
+        # grad_bg.add_updater(lambda m, dt: m.shift(UP * 0.02))
         stars_layer.add_updater(lambda m, dt: m.shift(UP * 0.05))
 
         # === Particle Sparkles ===
