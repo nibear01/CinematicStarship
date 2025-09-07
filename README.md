@@ -1,4 +1,4 @@
-# 🚀 CinematicStarship
+# Project CinematicStarship
 
 A cinematic **2D space journey animation** built with [Manim](https://www.manim.community/).  
 This project showcases a rocket launch from Earth, orbital refueling, interplanetary travel, and a landing on Mars — complete with a branded intro and outro.
